@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Error Handling In Javascript</title>
+</head>
+<body>
+
+    <h2>Error Handling</h2>
+
+    <button onclick="showError()">Click Me</button>
+
+    <p id="msg" style="color: red;"></p>
+
+    <script>
+        function showError() {
+            try {
+                //This function does not exist - it will cause an error
+                wrongFunction();   
+            } catch (error) {
+                //show the error message
+                document.getElementById("msg").innerHTML = "Oops! Something went wrong. There is an error in your code";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
